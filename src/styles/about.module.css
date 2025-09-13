@@ -1,0 +1,247 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  padding-block: 45px 42.5px;
+  transition: background-color 0.05s linear;
+}
+.darkPage {
+  background-color: var(--foreground);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 13px;
+  max-width: 95%;
+}
+.darkPage .header {
+  color: var(--sidebar-accent);
+}
+
+.header > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 2.65rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 500;
+  transition: color 0.05s linear;
+}
+
+.header h2 {
+  font-size: 1.225rem;
+  color: var(--muted-foreground);
+  text-align: center;
+  transition: color 0.05s linear;
+  width: 675px;
+  max-width: 96%;
+  transition: color 0.05s linear;
+}
+
+.darkPage .header h2 {
+  color: #a1a1a1;
+}
+
+/* Main */
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 33px;
+}
+
+.infoBox {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 26px;
+  width: 850px;
+  max-width: 93%;
+  transition: border-color 0.05s linear, color 0.05s linear;
+}
+.darkPage .infoBox {
+  border-color: #262626;
+  color: white;
+}
+
+.infoBox > h3 {
+  font-size: 1.03rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.infoBox.features {
+  padding-block: 22.5px;
+}
+
+.infoBox.features ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.feature {
+  flex: 0 0 calc((100% / 3));
+  font-size: 0.9rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feature::before {
+  content: "";
+  margin-top: 0.5px;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.infoBox.technologies ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.technology {
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  background-color: #eceef2;
+  padding: 2px 8px;
+  width: max-content;
+  text-wrap: nowrap;
+  transition: background-color 0.05s linear;
+}
+.darkPage .technology {
+  background-color: #262626;
+}
+
+.architectures ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.architecture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  gap: 8px;
+}
+
+.architecture h4 {
+  transition: color 0.05s linear;
+}
+
+.architecture p {
+  color: var(--muted-foreground);
+  transition: color 0.05s linear;
+}
+.darkPage .architecture p {
+  color: #a1a1a1;
+}
+
+.devFocus > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.devFocus p,
+.devFocus .focus {
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+  transition: color 0.05s linear;
+}
+.darkPage .devFocus p,
+.darkPage .devFocus .focus {
+  color: #a1a1a1;
+}
+
+.devFocus ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  max-width: 93%;
+}
+
+.footer hr {
+  width: 850px;
+  max-width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  border-radius: 100000px;
+  color: var(--border);
+  transition: border-bottom-color 0.05s linear, color 0.05s linear;
+}
+.darkPage .footer hr {
+  border-bottom-color: #262626;
+  color: #262626;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+  transition: color 0.05 linear;
+}
+.darkPage .footer p {
+  color: #a1a1a1;
+}
+
+@media screen and (max-width: 920px) {
+  .feature {
+    flex: 0 0 calc((100% / 2));
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .feature {
+    flex: 0 0 100%;
+  }
+
+  @media screen and (max-width: 560px) {
+    .footer p {
+      text-align: center;
+    }
+  }
+}

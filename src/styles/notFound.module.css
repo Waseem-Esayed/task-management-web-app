@@ -1,0 +1,184 @@
+.main {
+  height: calc(100vh - 67px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.05s linear, color 0.05s linear;
+}
+.darkPage {
+  background-color: var(--sidebar-foreground);
+  color: white;
+}
+
+.container {
+  width: 450px;
+  max-width: 93%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--background);
+  padding: 20px 32.5px 32.5px 32.5px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: background-color 0.05s linear, border-color 0.05s linear;
+}
+.darkPage .container {
+  background-color: var(--sidebar-foreground);
+  border-color: #262626;
+}
+
+.title {
+  font-size: 4rem;
+  line-height: 1.46;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  line-height: 1.46;
+}
+
+.description {
+  max-width: 95%;
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  margin-block: 6px 24px;
+  transition: color 0.05s linear;
+}
+.darkPage .description {
+  color: #a1a1a1;
+}
+
+.iconsContainer {
+  width: 4.2rem;
+  height: 4.2rem;
+  position: relative;
+  margin-bottom: 23.5px;
+}
+
+.iconsContainer svg:nth-child(1) {
+  color: #c9c9ce;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: color 0.05s linear;
+}
+.darkPage .iconsContainer svg {
+  color: #373737;
+}
+
+.iconsContainer > svg:nth-child(2) {
+  position: absolute;
+  top: 12.5%;
+  left: 85%;
+  font-size: 1.45rem;
+  transform: translate(-50%, -50%);
+  background-color: #d4183d;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.05s linear, color 0.05s linear;
+}
+.darkPage .iconsContainer > svg:nth-child(2) {
+  background-color: #82181a;
+  color: #f3211e;
+}
+
+.goHomeBtn {
+  background-color: var(--sidebar-primary);
+  color: var(--sidebar-primary-foreground);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-block: 7px;
+  width: 100%;
+  border-radius: var(--radius);
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  transition: background-color 0.05s linear, color 0.05s;
+}
+.darkPage .goHomeBtn {
+  background-color: var(--sidebar-primary-foreground);
+  color: var(--sidebar-primary);
+}
+
+.goHomeBtn:hover,
+.goHomeBtn:focus-visible {
+  background-color: #1c1b2a;
+}
+.darkPage .goHomeBtn:hover,
+.darkPage .goHomeBtn:focus-visible {
+  background-color: #e2e2e2;
+}
+
+.goBackBtn {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-block: 7px;
+  width: 100%;
+  margin-top: 13.5px;
+  border-radius: var(--radius);
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--border);
+  transition: background-color 0.05s linear, color 0.05s,
+    border-color 0.05s linear;
+}
+.darkPage .goBackBtn {
+  background-color: #121212;
+  color: var(--background);
+  border-color: #262626;
+}
+
+.goBackBtn:hover,
+.goBackBtn:focus-visible {
+  background-color: var(--accent);
+}
+.darkPage .goBackBtn:hover,
+.darkPage .goBackBtn:focus-visible {
+  background-color: #181818;
+}
+
+.commonPagesContainer {
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+  margin-top: 23px;
+}
+.darkPage .commonPagesContainer {
+  color: var(--sidebar-primary-foreground);
+}
+
+.commonPagesContainer > p {
+  margin-bottom: 7.5px;
+}
+
+.commonPagesContainer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.commonPagesContainer a {
+  transition: color 0.05s linear;
+}
+
+.commonPagesContainer a:hover,
+.commonPagesContainer a:focus-visible {
+  color: var(--sidebar-primary);
+}
+.commonPagesContainer a:hover,
+.commonPagesContainer a:focus-visible {
+  color: var(--sidebar-ring);
+}

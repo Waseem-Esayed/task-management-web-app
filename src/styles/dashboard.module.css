@@ -1,0 +1,709 @@
+.page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32.5px;
+  padding-block: 29px 42.5px;
+  transition: background-color 0.05s linear;
+}
+.darkPage {
+  background-color: var(--sidebar-foreground);
+}
+
+.header {
+  width: 95%;
+  max-width: 92.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > div:nth-child(1) {
+  flex: 0.9;
+}
+
+.pageTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  transition: color 0.05s linear;
+}
+.darkPage .pageTitle {
+  color: white;
+}
+
+.subtitle {
+  font-size: 0.925rem;
+  color: var(--muted-foreground);
+  transition: color 0.05s linear;
+}
+.darkPage .subtitle {
+  color: #a1a1a1;
+}
+
+.addTaskBtn {
+  background-color: var(--primary);
+  color: oklch(0.985 0 0);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: background-color 0.05s linear, color 0.05s linear;
+  padding: 8px 12px 8px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  cursor: default;
+  text-wrap: nowrap;
+}
+.darkPage .addTaskBtn {
+  color: var(--secondary-foreground);
+  background-color: white;
+}
+
+.addTaskBtn > i {
+  font-weight: 500;
+  transition: color 0.05s linear;
+}
+.darkPage .addTaskBtn > i {
+  color: var(--secondary-foreground);
+}
+
+.addTaskBtn:hover,
+.addTaskBtn:focus-visible {
+  background-color: #1c1b2b;
+}
+
+.darkPage .addTaskBtn:hover,
+.darkPage .addTaskBtn:focus-visible {
+  background-color: #e2e2e2;
+}
+
+.contentContainer {
+  width: 95%;
+  max-width: 92.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 17.5px;
+}
+
+.statCard {
+  flex: 0 0 calc((100% / 4) - (17.5px * 0.75));
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 21px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: color 0.05s linear, border-color 0.05s linear;
+}
+.darkPage .statCard {
+  border-color: #262626;
+}
+
+.statCard .statTitle {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  transition: color 0.05s linear;
+}
+.darkPage .statCard .statTitle {
+  color: #a1a1a1;
+}
+
+.statCard .statAmount {
+  font-size: 1.525rem;
+}
+
+.statCard .statAmount.total_tasks {
+  color: #115dfc;
+}
+.statCard .statAmount.in_progress {
+  color: #d98700;
+}
+.statCard .statAmount.completed {
+  color: #00a63e;
+}
+.statCard .statAmount.completion_rate {
+  color: #9810fb;
+}
+
+.todosContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.todosWrapper {
+  flex: 0 0 calc((100% / 3) - (24px * ((1 / 3) * 2)));
+  /* min-height: 500px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 45px;
+  padding: 20.5px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: background-color 0.05s 0.025s linear, border-color 0.05s linear;
+}
+.darkPage .todosWrapper {
+  border-color: #262626;
+}
+
+.todosWrapper .todosWrapperHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+}
+
+.todosWrapper .todosWrapperHeader > h2 {
+  font-size: 1.05rem;
+  transition: color 0.05s linear;
+}
+
+.amount {
+  margin-left: 7.5px;
+  font-size: 0.9rem;
+  color: #0a0a0a;
+  background-color: white;
+  padding: 3px 8px;
+  border-radius: 5000px;
+  transition: background-color 0.05s linear, color 0.05s linear;
+}
+.darkPage .amount {
+  color: white;
+  background-color: #0a0a0a;
+}
+
+.plusBtn {
+  padding: 7px;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  transition: background-color 0.05s linear, color 0.05s linear;
+}
+.darkPage .plusBtn {
+  color: var(--sidebar-primary-foreground);
+}
+
+.plusBtn:hover,
+.plusBtn:focus-visible {
+  background-color: #e9ebef;
+}
+.darkPage .plusBtn:hover,
+.darkPage .plusBtn:focus-visible {
+  background-color: rgba(94, 94, 94, 0.2);
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 12.5px;
+}
+
+.todoPlaceholder {
+  padding: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5px;
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+.darkPage .todoPlaceholder {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.todoPlaceholder > p:nth-child(1) {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  transition: color 0.05s linear;
+}
+.darkPage .todoPlaceholder > p:nth-child(1) {
+  color: #a1a1a1;
+}
+
+.todoPlaceholder > p:nth-child(2) {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--muted-foreground);
+  transition: color 0.05s linear;
+}
+.darkPage .todoPlaceholder > p:nth-child(2) {
+  color: #a1a1a1;
+}
+
+.todoContainer {
+  min-height: 165px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: white;
+  padding: 23px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: background-color 0.05s 0.05s linear,
+    border-color 0.05s 0.05s linear;
+}
+.darkPage .todoContainer {
+  border-color: #262626;
+  background-color: var(--sidebar-foreground);
+}
+
+.todoHeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.todoTitle {
+  font-size: 0.9rem;
+  transition: color 0.05s linear;
+}
+.darkPage .todoTitle {
+  color: white;
+}
+
+.todoIconsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5px;
+}
+
+.todoIconsContainer > button {
+  padding: 5px;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+
+.todoIconsContainer .editIcon,
+.todoIconsContainer .trashIcon {
+  transition: color 0.05s linear;
+}
+
+.darkPage .todoIconsContainer .editIcon {
+  color: #e3e3e3;
+}
+
+.darkPage .todoIconsContainer .trashIcon {
+  color: #82181a;
+}
+
+.todoIconsContainer > button:hover {
+  background-color: #e9ebef;
+}
+.darkPage .todoIconsContainer > button:hover {
+  background-color: rgba(94, 94, 94, 0.2);
+}
+
+.editIcon {
+  color: #292929;
+}
+
+.trashIcon {
+  color: #d4183d;
+}
+
+.todoDataContainer {
+  flex: 0.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.todoDescription {
+  max-width: 95%;
+  font-size: 0.78rem;
+  color: var(--muted-foreground);
+  margin-block: 5px 10px;
+  transition: color 0.05s linear;
+}
+.darkPage .todoDescription {
+  color: #a1a1a1;
+}
+
+.todoFooterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todoPriorityContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 10px 2px 7.5px;
+  border-radius: var(--radius);
+  gap: 5px;
+}
+
+.priorityText {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.todoPriorityContainer.Low {
+  background-color: #dbfce7;
+}
+.todoPriorityContainer .priorityText.Low {
+  color: #016630;
+}
+.priorityIcon.Low {
+  color: #00c950;
+}
+
+.todoPriorityContainer.Medium {
+  background-color: #fef9c2;
+}
+.todoPriorityContainer .priorityText.Medium {
+  color: #a74b00;
+}
+.priorityIcon.Medium {
+  color: #f0b100;
+}
+
+.todoPriorityContainer.High {
+  background-color: #ffe2e2;
+}
+.todoPriorityContainer .priorityText.High {
+  color: #ab0726;
+}
+.priorityIcon.High {
+  color: #fb2c36;
+}
+
+.todoDate {
+  color: var(--muted-foreground);
+  font-size: 0.785rem;
+  transition: color 0.05s linear;
+}
+.darkPage .todoDate {
+  color: #aeaeae;
+}
+
+.boxContainer {
+  max-width: 90%;
+  height: 400px;
+  aspect-ratio: 1.15 / 1;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  padding: 18px 25px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: background-color 0.05s linear, border-color 0.05s linear;
+}
+.darkPage .boxContainer {
+  background-color: #0a0a0a;
+  border-color: #262626;
+}
+
+.boxContainerHeader {
+  flex: 0.0925;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.boxTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  transition: color 0.05s linear;
+}
+.darkPage .boxTitle {
+  color: white;
+}
+
+.xBtn {
+  cursor: default;
+  transform: translate(40%, -10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border-radius: var(--radius);
+  transition: -webkit-box-shadow 0.1s linear;
+}
+
+.xBtn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px rgb(158, 158, 158), 0 0 0 4px rgb(206, 206, 206);
+}
+.darkPage .xBtn:focus-visible {
+  box-shadow: 0 0 0 3.5px #666666, 0 0 0 3px #4b4b4b;
+}
+
+.xIcon {
+  width: 1.025rem;
+  height: 1.025rem;
+  color: var(--muted-foreground);
+  transition: color 0.05s linear;
+}
+.darkPage .xIcon {
+  color: #b2b2b2;
+}
+
+.xBtn:hover .xIcon {
+  color: #0a0a0a;
+}
+.darkPage .xBtn:hover .xIcon {
+  color: white;
+}
+
+.boxContainerForm {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.inputsContainer {
+  flex: 0.87;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.boxTodoTitleContainer,
+.boxTodoDescriptionContainer,
+.boxTodoStatusContainer,
+.boxTodoPriorityContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.dropMenuContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boxTodoStatusContainer,
+.boxTodoPriorityContainer {
+  flex: 0.45;
+}
+
+.boxTodoLabel {
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--card-foreground);
+  transition: color 0.05s linear;
+  user-select: none;
+}
+.darkPage .boxTodoLabel {
+  color: white;
+}
+
+.boxTodoInput {
+  width: 100%;
+  background-color: var(--input-background);
+  color: var(--foreground);
+  cursor: text;
+  font-size: 0.9rem;
+  padding: 7px 12.5px 7px 13px;
+  border: none;
+  border-radius: 0.525rem;
+  transition: background-color 0.05s linear, -webkit-box-shadow 0.1s linear,
+    border 0.05s linear, color 0.05s linear,
+    -webkit-text-fill-color 0.05s linear;
+}
+.darkPage .boxTodoInput {
+  background-color: #121212;
+  color: white;
+  border: 1px solid #262626;
+}
+
+.boxTodoInput[id="description"] {
+  resize: none;
+}
+
+.boxTodoInput:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--input-background) inset !important;
+  -webkit-text-fill-color: var(--foreground) !important;
+}
+.darkPage .boxTodoInput:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #121212 inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+.boxTodoInput::placeholder {
+  color: var(--muted-foreground);
+  transition: color 0.05s linear;
+}
+.darkPage .boxTodoInput::placeholder {
+  color: #a1a1a1;
+}
+
+.boxTodoInput:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px rgb(158, 158, 158), 0 0 0 4px rgb(206, 206, 206);
+}
+.darkPage .boxTodoInput:focus-visible {
+  box-shadow: 0 0 0 3.5px #666666, 0 0 0 3px #4b4b4b;
+}
+
+.boxTodoInput::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+.darkPage .boxTodoInput::selection {
+  background-color: var(--primary-foreground);
+  color: var(--primary);
+}
+
+.dropMenuContainer select {
+  width: 100%;
+  color: var(--card-foreground);
+  font-size: 0.9rem;
+  background-color: var(--input-background);
+  padding: 7.75px 10px 7.75px 13px;
+  border-radius: var(--radius);
+  transition: background-color 0.05s linear, -webkit-box-shadow 0.1s linear,
+    border-color 0.05s linear, color 0.05s linear,
+    -webkit-text-fill-color 0.05s linear;
+}
+.darkPage .dropMenuContainer select {
+  background-color: #121212;
+  color: white;
+  border: 1px solid #262626;
+}
+.dropMenuContainer select:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px rgb(158, 158, 158), 0 0 0 4px rgb(206, 206, 206);
+}
+.darkPage .dropMenuContainer select:focus-visible {
+  box-shadow: 0 0 0 3.5px #666666, 0 0 0 3px #4b4b4b;
+}
+
+.btnsContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.btnsContainer > button {
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: default;
+}
+
+.btnsContainer > button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px rgb(158, 158, 158), 0 0 0 4px rgb(206, 206, 206);
+}
+.darkPage .btnsContainer > button:focus-visible {
+  box-shadow: 0 0 0 3.5px #666666, 0 0 0 3px #4b4b4b;
+}
+
+.btnsContainer .cancelBtn {
+  background-color: white;
+  color: var(--primary);
+  padding: 5px 15.5px;
+  border: 1px solid var(--border);
+  transition: background-color 0.05s linear, color 0.05s linear,
+    border-color 0.05s linear, -webkit-box-shadow 0.1s linear;
+}
+.darkPage .cancelBtn {
+  background-color: #121212;
+  color: white;
+  border-color: #262626;
+}
+
+.cancelBtn:hover {
+  background-color: #e9ebef;
+}
+.darkPage .cancelBtn:hover {
+  background-color: #181818;
+}
+
+.createBtn {
+  background-color: var(--primary);
+  color: oklch(0.985 0 0);
+  padding: 6px 15.5px;
+  transition: background-color 0.05s linear, color 0.05s linear;
+}
+.darkPage .createBtn {
+  background-color: white;
+  color: var(--secondary-foreground);
+}
+
+.createBtn:hover {
+  background-color: #1c1b2b;
+}
+.darkPage .createBtn:hover {
+  background-color: #e2e2e2;
+}
+
+.overlayer {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 987px) {
+  .page {
+    padding-top: 20px;
+  }
+
+  .pageTitle {
+    font-size: 1.5rem !important;
+  }
+
+  .statCard {
+    flex: 0 0 calc((100% / 2) - (17.5px * 0.5));
+  }
+
+  .todosWrapper {
+    flex: 0 0 100%;
+  }
+
+  .todosWrapper .todosWrapperHeader > h2 {
+    font-size: 1rem;
+  }
+}

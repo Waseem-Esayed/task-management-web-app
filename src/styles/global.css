@@ -1,0 +1,223 @@
+:root {
+  /* === BASE SETTINGS === */
+  --font-size: 16px; /* Alle Seiten */
+  --font-weight-medium: 500; /* Alle Seiten - Headlines, Buttons */
+  --font-weight-normal: 400; /* Alle Seiten - Body Text */
+  --radius: 0.625rem; /* Alle Seiten - Border Radius */
+
+  /* === BACKGROUND & FOREGROUND === */
+  --background: #ffffff; /* Alle Seiten - Haupthintergrund */
+  --foreground: oklch(0.145 0 0); /* Alle Seiten - Haupttext */
+
+  /* === CARD SYSTEM === */
+  --card: #ffffff; /* Home: Feature Cards, Dashboard: Task Cards, About: Info Cards, Login: Form Container */
+  --card-foreground: oklch(
+    0.145 0 0
+  ); /* Home: Card Text, Dashboard: Task Text, About: Card Text, Login: Form Text */
+
+  /* === POPOVER SYSTEM === */
+  --popover: oklch(1 0 0); /* Dashboard: Dropdowns, Task Menus */
+  --popover-foreground: oklch(0.145 0 0); /* Dashboard: Dropdown Text */
+
+  /* === PRIMARY ACTIONS === */
+  --primary: #030213; /* Home: CTA Buttons, Dashboard: Add Task, Login: Login Button */
+  --primary-foreground: oklch(
+    1 0 0
+  ); /* Home: CTA Text, Dashboard: Button Text, Login: Button Text */
+
+  /* === SECONDARY ACTIONS === */
+  --secondary: oklch(
+    0.95 0.0058 264.53
+  ); /* Home: Secondary Buttons, Dashboard: Status Buttons */
+  --secondary-foreground: #030213; /* Home: Secondary Text, Dashboard: Status Text */
+
+  /* === MUTED ELEMENTS === */
+  --muted: #ececf0; /* Home: Subtle Backgrounds, Dashboard: Task Descriptions, About: Less Important Sections */
+  --muted-foreground: #717182; /* Home: Subtitles, Dashboard: Task Meta, About: Secondary Text */
+
+  /* === ACCENT HIGHLIGHTS === */
+  --accent: #e9ebef; /* Dashboard: Drag & Drop Highlights, Hover States */
+  --accent-foreground: #030213; /* Dashboard: Accent Text */
+
+  /* === DESTRUCTIVE ACTIONS === */
+  --destructive: #d4183d; /* Dashboard: Delete Buttons, Error States */
+  --destructive-foreground: #ffffff; /* Dashboard: Delete Button Text */
+
+  /* === BORDERS & INPUTS === */
+  --border: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /* Alle Seiten - Borders, Dashboard: Card Borders, Login: Form Borders */
+  --input: transparent; /* Login: Input Fields */
+  --input-background: #f3f3f5; /* Login: Input Backgrounds */
+  --ring: oklch(0.708 0 0); /* Login: Focus States, Form Validation */
+
+  /* === SWITCH COMPONENTS === */
+  --switch-background: #cbced4; /* Navigation: Dark Mode Toggle */
+
+  /* === CHART COLORS === */
+  --chart-1: oklch(
+    0.646 0.222 41.116
+  ); /* Dashboard: Analytics/Charts (falls implementiert) */
+  --chart-2: oklch(0.6 0.118 184.704); /* Dashboard: Analytics/Charts */
+  --chart-3: oklch(0.398 0.07 227.392); /* Dashboard: Analytics/Charts */
+  --chart-4: oklch(0.828 0.189 84.429); /* Dashboard: Analytics/Charts */
+  --chart-5: oklch(0.769 0.188 70.08); /* Dashboard: Analytics/Charts */
+
+  /* === SIDEBAR NAVIGATION === */
+  --sidebar: oklch(
+    0.985 0 0
+  ); /* Home, Dashboard, About: Navigation Background */
+  --sidebar-foreground: oklch(
+    0.145 0 0
+  ); /* Home, Dashboard, About: Navigation Text */
+  --sidebar-primary: #030213; /* Home, Dashboard, About: Active Nav Items */
+  --sidebar-primary-foreground: oklch(
+    0.985 0 0
+  ); /* Home, Dashboard, About: Active Nav Text */
+  --sidebar-accent: oklch(
+    0.97 0 0
+  ); /* Home, Dashboard, About: Nav Hover States */
+  --sidebar-accent-foreground: oklch(
+    0.205 0 0
+  ); /* Home, Dashboard, About: Nav Hover Text */
+  --sidebar-border: oklch(
+    0.922 0 0
+  ); /* Home, Dashboard, About: Navigation Borders */
+  --sidebar-ring: oklch(
+    0.708 0 0
+  ); /* Home, Dashboard, About: Nav Focus States */
+}
+
+/* Box sizing & Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dark body {
+  background-color: var(--sidebar-foreground);
+}
+
+/* Globale Defaults */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+section {
+  width: 100%;
+}
+
+/* Textelemente */
+code,
+kbd,
+samp,
+pre,
+var,
+textarea,
+input,
+select,
+button {
+  font: inherit;
+  font-size: 1em;
+  white-space: normal;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer; /* nützlich für Buttons */
+}
+
+input, textarea {
+  touch-action: manipulation;
+}
+
+
+fieldset {
+  border: none;
+}
+
+/* Optional: keine kursiven Tags */
+dfn,
+i,
+cite,
+address,
+em {
+  font-style: normal;
+}
+
+/* Überschriften & Fett */
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* Links & Bilder */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
+img,
+a img {
+  border: 0;
+  max-width: 100%;
+  display: block;
+}
+
+/* Tabellen */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th,
+td {
+  vertical-align: top;
+  text-align: left;
+}
+
+/* Listen */
+ul,
+ol,
+menu,
+dir {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sub/Sup */
+sub,
+sup {
+  vertical-align: baseline;
+}
+
+/* Alte / seltene Elemente entfernt */
+font {
+  color: inherit !important;
+  font: inherit !important;
+}
+marquee {
+  overflow: inherit !important;
+  -moz-binding: none;
+}
+nobr {
+  white-space: normal;
+}

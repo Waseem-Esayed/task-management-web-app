@@ -1,0 +1,327 @@
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  color: var(--foreground);
+  background-color: var(--background);
+  transition: background-color 0.05s linear, color 0.05s linear;
+}
+.darkPage.section {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.header {
+  max-width: 96%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12.5px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+}
+
+.instruction {
+  max-width: 95%;
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  margin-bottom: 19px;
+  text-align: center;
+  transition: color 0.05s linear;
+}
+.darkPage .instruction {
+  color: #a1a1a1;
+}
+
+.form {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 21px 23px 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 17px;
+  width: 460px;
+  max-width: 96%;
+  background-color: var(--card);
+  transition: background-color 0.05s linear, border-color 0.05s linear;
+}
+.darkPage .form {
+  border-color: #262626;
+  background-color: var(--foreground);
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.welcome > i {
+  font-size: 1.1rem;
+  color: var(--primary);
+  transition: color 0.05s linear;
+}
+.darkPage .welcome > i {
+  color: var(--primary-foreground);
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.inputWrapper > svg {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  color: var(--muted-foreground);
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  transition: color 0.05s linear;
+}
+.darkPage .inputWrapper > svg {
+  color: #a1a1a1;
+}
+
+.labelWrapper {
+  width: 100%;
+  transform: translateY(12.5px);
+}
+
+label[for="username"] {
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--card-foreground);
+  transition: color 0.05s linear;
+  user-select: none;
+}
+.darkPage label[for="username"] {
+  color: white;
+}
+
+input[id="username"] {
+  width: 100%;
+  background-color: var(--input-background);
+  color: var(--foreground);
+  cursor: text;
+  font-size: 0.9rem;
+  padding: 7px 10px 7px 40px;
+  border-radius: var(--radius);
+  transition: background-color 0.05s linear, -webkit-box-shadow 0.1s linear,
+    border-color 0.05s linear, color 0.05s linear,
+    -webkit-text-fill-color 0.05s linear;
+}
+.darkPage input[id="username"] {
+  background-color: #121212;
+  color: white;
+  border: 1px solid #262626;
+}
+
+input[id="username"]:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--input-background) inset !important;
+  -webkit-text-fill-color: var(--foreground) !important;
+}
+.darkPage [id="username"]:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #121212 inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+input[id="username"]::placeholder {
+  color: var(--muted-foreground);
+  transition: color 0.05s linear;
+}
+.darkPage input[id="username"]::placeholder {
+  color: #a1a1a1;
+}
+
+input[id="username"]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px rgb(158, 158, 158), 0 0 0 4px rgb(206, 206, 206);
+}
+.darkPage [id="username"]:focus-visible {
+  box-shadow: 0 0 0 1px #666666, 0 0 0 4px #4b4b4b;
+}
+
+input[id="username"]::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+.darkPage input[id="username"]::selection {
+  background-color: var(--primary-foreground);
+  color: var(--primary);
+}
+
+/* Buttons */
+.signInBtn {
+  width: 100%;
+  background-color: #818089;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 7px 14.5px;
+  border-radius: var(--radius);
+  cursor: default;
+  transition: background-color 0.05s linear, color 0.05s linear;
+}
+.darkPage .signInBtn {
+  color: var(--card-foreground);
+  background-color: #828282;
+}
+.signInBtnAvailable {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+.signInBtnAvailable:hover,
+.signInBtnAvailable:focus-visible {
+  background-color: #1c1b2a;
+}
+.darkPage .signInBtnAvailable {
+  background-color: var(--primary-foreground);
+  color: var(--primary);
+}
+.darkPage .signInBtnAvailable:hover,
+.darkPage .signInBtnAvailable:focus-visible {
+  background-color: var(--accent);
+}
+
+.demoBtn {
+  width: 100%;
+  background-color: var(--card);
+  color: var(--card-foreground);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-block: 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17.9px;
+  transition: background-color 0.05s linear, color 0.05s linear,
+    border-color 0.05s linear;
+}
+.demoBtn:hover,
+.demoBtn:focus-visible {
+  background-color: var(--accent);
+}
+
+.darkPage .demoBtn {
+  background-color: #121212;
+  color: var(--background);
+  border-color: #262626;
+}
+.darkPage .demoBtn:hover,
+.darkPage .demoBtn:focus-visible {
+  background-color: #181818;
+}
+
+.demoBtn > svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.orText {
+  width: 100%;
+  color: var(--muted-foreground);
+  font-size: 0.775rem;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin-block: 6px;
+  transition: color 0.05s linear;
+}
+.darkPage .orText {
+  color: #a1a1a1;
+}
+
+.orText::before,
+.orText::after {
+  content: "";
+  display: inline-block;
+  width: 50%;
+  margin: 0 0.5em 0 -55%;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.05s linear;
+}
+.darkPage .orText::before,
+.darkPage .orText::after {
+  border-bottom-color: #262626;
+}
+
+.orText:after {
+  margin: 0 -55% 0 0.5em;
+}
+
+.demoInfo {
+  width: 100%;
+  background-color: var(--muted);
+  color: var(--foreground);
+  padding: 15px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6.75px;
+  transition: background-color 0.05s linear, color 0.05s linear;
+}
+.darkPage .demoInfo {
+  background-color: #262626;
+}
+
+.demoInfo > h3 {
+  font-size: 0.875rem;
+  color: var(--foreground);
+  transition: color 0.05s linear;
+  margin-left: 0.5px;
+}
+.darkPage .demoInfo > h3 {
+  color: white;
+}
+
+.demoInfo > ul {
+  font-size: 0.76rem;
+  color: var(--muted-foreground);
+  list-style: disc inside none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2px;
+  transition: color 0.05s linear;
+}
+.darkPage .demoInfo > ul {
+  color: #a1a1a1;
+}
+
+.demoInfo li::marker {
+  font-size: 9px;
+}
+
+.note {
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  margin-top: 9px;
+  line-height: 1.4;
+  text-align: center;
+  transition: color 0.05s linear;
+}
+.darkPage .note {
+  color: #a1a1a1;
+}

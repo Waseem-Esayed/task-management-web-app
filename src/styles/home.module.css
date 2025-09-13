@@ -1,0 +1,291 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h2 {
+  font-size: 2.275rem;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  max-width: 95%;
+  transition: color 0.05s linear;
+}
+.darkPage h2 {
+  color: oklch(0.985 0 0);
+}
+.main h3 {
+  font-size: 1.225rem;
+  color: var(--muted-foreground);
+  text-align: center;
+  transition: color 0.05s linear;
+  width: 675px;
+  max-width: 96%;
+  margin-top: 2.5px;
+}
+.darkPage h3 {
+  color: #a1a1a1;
+}
+
+.h2_h3_Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 17.25px;
+  width: 100%;
+}
+
+/* Landing Section */
+.landingSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20.5px;
+  background-color: var(--background);
+  padding: 130px;
+  transition: background-color 0.05s linear, color 0.05s linear;
+}
+.darkPage .landingSection {
+  background-color: var(--foreground);
+  color: oklch(0.985 0 0);
+}
+
+.landingSection h1 {
+  font-size: 3.775rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+
+.darkPage .landingSection h3 {
+  color: #a1a1a1;
+}
+
+.landingSection nav {
+  margin-top: 8.1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17.5px;
+}
+
+.landingSection .dashboardOrAuthBtn,
+.messageSection .startForFreeBtn {
+  background-color: var(--primary);
+  color: oklch(0.985 0 0);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: background-color 0.05s linear, color 0.05s linear, gap 0.1s linear;
+  padding: 9px 14.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  cursor: default;
+}
+.darkPage .landingSection .dashboardOrAuthBtn,
+.darkPage .messageSection .startForFreeBtn {
+  color: var(--secondary-foreground);
+  background-color: white;
+}
+
+.landingSection .dashboardOrAuthBtn > i,
+.messageSection .startForFreeBtn > i {
+  font-weight: 500;
+  transition: color 0.05s linear;
+}
+.darkPage .landingSection .dashboardOrAuthBtn > i,
+.darkPage .messageSection .startForFreeBtn > i {
+  color: var(--secondary-foreground);
+}
+
+.landingSection .dashboardOrAuthBtn:hover,
+.landingSection .dashboardOrAuthBtn:focus-visible,
+.messageSection .startForFreeBtn:hover,
+.messageSection .startForFreeBtn:focus-visible {
+  background-color: #1c1b2b;
+  gap: 20px;
+}
+
+.darkPage .landingSection .dashboardOrAuthBtn:hover,
+.darkPage .landingSection .dashboardOrAuthBtn:focus-visible,
+.darkPage .messageSection .startForFreeBtn:hover,
+.darkPage .messageSection .startForFreeBtn:focus-visible {
+  background-color: #e2e2e2;
+}
+
+.landingSection .learnMoreBtn {
+  background-color: white;
+  color: black;
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: background-color 0.05s linear, color 0.05s linear,
+    border-color 0.05s linear;
+  padding: 9px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  cursor: default;
+}
+.darkPage .landingSection .learnMoreBtn {
+  background-color: #141414;
+  border-color: #262626;
+  color: white;
+}
+
+.landingSection .learnMoreBtn:hover,
+.landingSection .learnMoreBtn:focus-visible {
+  background-color: #8f8f8f33;
+}
+.darkPage .landingSection .learnMoreBtn:hover,
+.darkPage .landingSection .learnMoreBtn:focus-visible {
+  background-color: #181818;
+}
+
+/* Features Section */
+.featuresSection {
+  background-color: #f5f5f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 65px;
+  padding: 80px 10px 80px 10px;
+  transition: background-color 0.05s linear;
+}
+
+.featuresSection h3 {
+  width: 650px;
+}
+
+.darkPage .featuresSection {
+  background-color: #181818;
+}
+
+.featuresSection .featuresContainer {
+  width: 1500px;
+  max-width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 32.5px;
+  flex-wrap: wrap;
+}
+
+.featuresSection .featureCard {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  flex: 1 1;
+  min-width: 235px;
+  transition: background-color 0.05s linear, border-color 0.05s linear;
+}
+.darkPage .featuresSection .featureCard {
+  background-color: var(--foreground);
+  border-color: #262626;
+}
+
+.featuresSection .featureCard .iconContainer {
+  background-color: #e5e5e7;
+  border-radius: var(--radius);
+  width: 49px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.05s linear, color 0.05s linear;
+}
+
+.darkPage .featuresSection .featureCard .iconContainer {
+  background-color: #222222;
+  color: white;
+}
+
+.featuresSection .featureCard .iconContainer img {
+  width: 22px;
+}
+
+.featuresSection .featureCard .iconContainer i {
+  font-size: 1.2rem;
+}
+
+.featuresSection .featureCard h4 {
+  color: var(--foreground);
+  font-size: 1.15rem;
+  font-weight: 600;
+  transition: color 0.05 linear;
+}
+.darkPage .featuresSection .featureCard h4 {
+  color: oklch(0.985 0 0);
+}
+
+.featuresSection .featureCard p {
+  color: var(--muted-foreground);
+  font-size: 0.9rem;
+  transition: color 0.05 linear;
+}
+.darkPage .featuresSection .featureCard p {
+  color: #a1a1a1;
+}
+
+.featuresSection .featureCard h4,
+.featuresSection .featureCard p {
+  text-align: center;
+}
+
+/* Message Section */
+.messageSection {
+  background-color: white;
+  padding-block: 75px 80px;
+  transition: background-color 0.05 linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+.darkPage .messageSection {
+  background-color: var(--foreground);
+}
+
+.messageSection .startForFreeBtn {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 947px) {
+  h1 {
+    font-size: 2.25rem !important;
+  }
+  .main h2 {
+    font-size: 1.825rem !important;
+  }
+  .landingSection {
+    padding: 50px 10px 70px 10px;
+  }
+}
+
+@media screen and (max-width: 557px) {
+  .landingSection nav {
+    flex-direction: column;
+    width: 98%;
+  }
+
+  .landingSection nav a {
+    width: 90%;
+  }
+}
