@@ -1,97 +1,56 @@
 :root {
-  /* === BASE SETTINGS === */
-  --font-size: 16px; /* Alle Seiten */
-  --font-weight-medium: 500; /* Alle Seiten - Headlines, Buttons */
-  --font-weight-normal: 400; /* Alle Seiten - Body Text */
-  --radius: 0.625rem; /* Alle Seiten - Border Radius */
+  --font-size: 16px;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --radius: 0.625rem;
 
-  /* === BACKGROUND & FOREGROUND === */
-  --background: #ffffff; /* Alle Seiten - Haupthintergrund */
-  --foreground: oklch(0.145 0 0); /* Alle Seiten - Haupttext */
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
 
-  /* === CARD SYSTEM === */
-  --card: #ffffff; /* Home: Feature Cards, Dashboard: Task Cards, About: Info Cards, Login: Form Container */
-  --card-foreground: oklch(
-    0.145 0 0
-  ); /* Home: Card Text, Dashboard: Task Text, About: Card Text, Login: Form Text */
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
 
-  /* === POPOVER SYSTEM === */
-  --popover: oklch(1 0 0); /* Dashboard: Dropdowns, Task Menus */
-  --popover-foreground: oklch(0.145 0 0); /* Dashboard: Dropdown Text */
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
 
-  /* === PRIMARY ACTIONS === */
-  --primary: #030213; /* Home: CTA Buttons, Dashboard: Add Task, Login: Login Button */
-  --primary-foreground: oklch(
-    1 0 0
-  ); /* Home: CTA Text, Dashboard: Button Text, Login: Button Text */
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
 
-  /* === SECONDARY ACTIONS === */
-  --secondary: oklch(
-    0.95 0.0058 264.53
-  ); /* Home: Secondary Buttons, Dashboard: Status Buttons */
-  --secondary-foreground: #030213; /* Home: Secondary Text, Dashboard: Status Text */
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
 
-  /* === MUTED ELEMENTS === */
-  --muted: #ececf0; /* Home: Subtle Backgrounds, Dashboard: Task Descriptions, About: Less Important Sections */
-  --muted-foreground: #717182; /* Home: Subtitles, Dashboard: Task Meta, About: Secondary Text */
+  --muted: #ececf0;
+  --muted-foreground: #717182;
 
-  /* === ACCENT HIGHLIGHTS === */
-  --accent: #e9ebef; /* Dashboard: Drag & Drop Highlights, Hover States */
-  --accent-foreground: #030213; /* Dashboard: Accent Text */
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
 
-  /* === DESTRUCTIVE ACTIONS === */
-  --destructive: #d4183d; /* Dashboard: Delete Buttons, Error States */
-  --destructive-foreground: #ffffff; /* Dashboard: Delete Button Text */
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
 
-  /* === BORDERS & INPUTS === */
-  --border: rgba(
-    0,
-    0,
-    0,
-    0.1
-  ); /* Alle Seiten - Borders, Dashboard: Card Borders, Login: Form Borders */
-  --input: transparent; /* Login: Input Fields */
-  --input-background: #f3f3f5; /* Login: Input Backgrounds */
-  --ring: oklch(0.708 0 0); /* Login: Focus States, Form Validation */
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --ring: oklch(0.708 0 0);
 
-  /* === SWITCH COMPONENTS === */
-  --switch-background: #cbced4; /* Navigation: Dark Mode Toggle */
+  --switch-background: #cbced4;
 
-  /* === CHART COLORS === */
-  --chart-1: oklch(
-    0.646 0.222 41.116
-  ); /* Dashboard: Analytics/Charts (falls implementiert) */
-  --chart-2: oklch(0.6 0.118 184.704); /* Dashboard: Analytics/Charts */
-  --chart-3: oklch(0.398 0.07 227.392); /* Dashboard: Analytics/Charts */
-  --chart-4: oklch(0.828 0.189 84.429); /* Dashboard: Analytics/Charts */
-  --chart-5: oklch(0.769 0.188 70.08); /* Dashboard: Analytics/Charts */
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
 
-  /* === SIDEBAR NAVIGATION === */
-  --sidebar: oklch(
-    0.985 0 0
-  ); /* Home, Dashboard, About: Navigation Background */
-  --sidebar-foreground: oklch(
-    0.145 0 0
-  ); /* Home, Dashboard, About: Navigation Text */
-  --sidebar-primary: #030213; /* Home, Dashboard, About: Active Nav Items */
-  --sidebar-primary-foreground: oklch(
-    0.985 0 0
-  ); /* Home, Dashboard, About: Active Nav Text */
-  --sidebar-accent: oklch(
-    0.97 0 0
-  ); /* Home, Dashboard, About: Nav Hover States */
-  --sidebar-accent-foreground: oklch(
-    0.205 0 0
-  ); /* Home, Dashboard, About: Nav Hover Text */
-  --sidebar-border: oklch(
-    0.922 0 0
-  ); /* Home, Dashboard, About: Navigation Borders */
-  --sidebar-ring: oklch(
-    0.708 0 0
-  ); /* Home, Dashboard, About: Nav Focus States */
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
-/* Box sizing & Reset */
 *,
 *::before,
 *::after {
@@ -104,7 +63,6 @@
   background-color: var(--sidebar-foreground);
 }
 
-/* Globale Defaults */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
@@ -114,7 +72,6 @@ section {
   width: 100%;
 }
 
-/* Textelemente */
 code,
 kbd,
 samp,
@@ -130,19 +87,18 @@ button {
   background: none;
   border: none;
   color: inherit;
-  cursor: pointer; /* nützlich für Buttons */
+  cursor: pointer;
 }
 
-input, textarea {
+input,
+textarea {
   touch-action: manipulation;
 }
-
 
 fieldset {
   border: none;
 }
 
-/* Optional: keine kursiven Tags */
 dfn,
 i,
 cite,
@@ -151,7 +107,6 @@ em {
   font-style: normal;
 }
 
-/* Überschriften & Fett */
 b,
 strong,
 h1,
@@ -163,7 +118,6 @@ h6 {
   font-weight: normal;
 }
 
-/* Links & Bilder */
 a {
   color: inherit;
   text-decoration: none;
@@ -181,7 +135,6 @@ a img {
   display: block;
 }
 
-/* Tabellen */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -193,7 +146,6 @@ td {
   text-align: left;
 }
 
-/* Listen */
 ul,
 ol,
 menu,
@@ -203,13 +155,11 @@ dir {
   margin: 0;
 }
 
-/* Sub/Sup */
 sub,
 sup {
   vertical-align: baseline;
 }
 
-/* Alte / seltene Elemente entfernt */
 font {
   color: inherit !important;
   font: inherit !important;
