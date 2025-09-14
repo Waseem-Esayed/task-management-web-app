@@ -11,7 +11,6 @@ import { useEffect } from 'react';
 
 function AppWrapper({ children }) {
   useEffect(() => {
-    // Initialisierung nur im Browser
     ReactGA.initialize("G-12157702481");
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   }, []);
