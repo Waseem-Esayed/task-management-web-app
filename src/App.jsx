@@ -11,8 +11,11 @@ import { useEffect } from 'react';
 
 function AppWrapper({ children }) {
   useEffect(() => {
-    ReactGA.initialize("G-12157702481");
-    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+    const gaId = process.env.REACT_APP_GA_MEASUREMENT_ID;
+    if (gaId) {
+      ReactGA.initialize(gaId);
+      ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+    }
   }, []);
 
   return children;
