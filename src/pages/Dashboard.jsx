@@ -2,7 +2,7 @@ import styles from '../styles/dashboard.module.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { addTodo, updateTodo, removeTodo } from '../features/todo/todoSlice'
 import { Plus, SquarePen, Trash2, Circle, CircleAlert, ArrowUp, X } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const StatCard = ({ title, amount }) => {
   return (
@@ -123,7 +123,7 @@ const TodosWrapper = ({ title, openAddBox, openEditBox }) => {
   )
 }
 
-const AddOrEditTaskBox = ({ setVisibleTaskBox, defaultStatus, editingTask }) => {
+const AddOrEditTaskBox = ({ visibleTaskBox, setVisibleTaskBox, defaultStatus, editingTask }) => {
   const [title, setTitle] = useState(editingTask?.title || "")
   const [description, setDescription] = useState(editingTask?.description || "")
   const [status, setStatus] = useState(editingTask?.status || defaultStatus || "To Do")
@@ -140,6 +140,18 @@ const AddOrEditTaskBox = ({ setVisibleTaskBox, defaultStatus, editingTask }) => 
       dispatch(addTodo(title, description, status, priority))
     }
   }
+
+  useEffect(() => {
+    if (visibleTaskBox) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [visibleTaskBox])
 
   return (
     <>
@@ -249,7 +261,7 @@ const Dashboard = () => {
           <TodosWrapper title="Done" openAddBox={openAddBox} openEditBox={openEditBox} />
         </section>
       </section>
-      {visibleTaskBox && <AddOrEditTaskBox setVisibleTaskBox={setVisibleTaskBox} defaultStatus={defaultStatus} editingTask={editingTask} />}
+      {visibleTaskBox && <AddOrEditTaskBox visibleTaskBox={visibleTaskBox} setVisibleTaskBox={setVisibleTaskBox} defaultStatus={defaultStatus} editingTask={editingTask} />}
     </main>
   )
 }
