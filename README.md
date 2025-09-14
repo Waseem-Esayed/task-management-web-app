@@ -3,7 +3,7 @@
 A modern **Task Management Web Application** that helps users create, manage, and track their tasks efficiently.  
 The **design** was created with **Figma AI**, while the **entire application was hand-coded** in React and Redux.
 
-🌐 **Live Demo:** [task-manager.vercel.app](https://task-manager.vercel.app)
+🌐 **Live Demo:** [https://task-manager-hazel-tau.vercel.app/](https://task-manager-hazel-tau.vercel.app/)
 
 ⚠️ **Important Note:** Some features are mentioned in the project but are **not yet implemented** (see below).
 
