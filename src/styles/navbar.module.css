@@ -203,11 +203,11 @@
 
 @media screen and (min-width: 1400px) {
   .header {
-    padding-inline: 18% 18.5%;
+    padding-inline: 15% 15.42%;
   }
 }
 
-@media screen and (max-width: 684px) {
+@media screen and (max-width: 786px) {
   .navLinkContainer,
   .demoContainer,
   .logoutBtn > span {
