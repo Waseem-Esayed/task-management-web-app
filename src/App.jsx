@@ -9,11 +9,10 @@ import NotFound from './pages/NotFound';
 import ReactGA from "react-ga4";
 import { useEffect } from 'react';
 
-ReactGA.initialize("G-12157702481");
-
 function AppWrapper({ children }) {
   useEffect(() => {
-    // Nur beim ersten Laden der App
+    // Initialisierung nur im Browser
+    ReactGA.initialize("G-12157702481");
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   }, []);
 
@@ -25,16 +24,16 @@ function App() {
     createRoutesFromElements(
       <>
         <Route path='/' element={<RootLayout />}>
-          <Route index element={<Home />}></Route>
-          <Route path='home' element={<Home />}></Route>
+          <Route index element={<Home />} />
+          <Route path='home' element={<Home />} />
           <Route element={<ProtectedRoute />}>
             <Route path='dashboard' element={<Dashboard />} />
           </Route>
-          <Route path='about' element={<About />}></Route>
+          <Route path='about' element={<About />} />
           <Route path='*' element={<NotFound />} />
         </Route>
 
-        <Route path='auth' element={<Auth />}></Route>
+        <Route path='auth' element={<Auth />} />
       </>
     )
   );
