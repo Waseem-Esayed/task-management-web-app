@@ -222,7 +222,7 @@
 .footer p {
   font-size: 0.9rem;
   color: var(--muted-foreground);
-  transition: color 0.05 linear;
+  transition: color 0.05s linear;
 }
 .darkPage .footer p {
   color: #a1a1a1;

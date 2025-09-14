@@ -228,7 +228,7 @@
   color: var(--foreground);
   font-size: 1.15rem;
   font-weight: 600;
-  transition: color 0.05 linear;
+  transition: color 0.05s linear;
 }
 .darkPage .featuresSection .featureCard h4 {
   color: oklch(0.985 0 0);
@@ -237,7 +237,7 @@
 .featuresSection .featureCard p {
   color: var(--muted-foreground);
   font-size: 0.9rem;
-  transition: color 0.05 linear;
+  transition: color 0.05s linear;
 }
 .darkPage .featuresSection .featureCard p {
   color: #a1a1a1;
@@ -252,12 +252,12 @@
 .messageSection {
   background-color: white;
   padding-block: 75px 80px;
-  transition: background-color 0.05 linear;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 18px;
+  transition: background-color 0.05s linear;
 }
 .darkPage .messageSection {
   background-color: var(--foreground);
