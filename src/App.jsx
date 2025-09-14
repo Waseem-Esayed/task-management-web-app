@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 
 function AppWrapper({ children }) {
   useEffect(() => {
-    const gaId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+    const gaId = process.env.REACT_APP_GA_MEASUREMENT_ID;
     if (gaId) {
       ReactGA.initialize(gaId);
       ReactGA.send({ hitType: "pageview", page: window.location.pathname });
