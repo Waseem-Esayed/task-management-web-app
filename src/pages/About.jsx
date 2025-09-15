@@ -109,7 +109,7 @@ const InfoBox = ({ title, dataType }) => {
 }
 
 const About = () => {
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.theme);
 
   return (
     <main className={`${styles.page} ${theme === 'dark' ? styles.darkPage : ''}`}>

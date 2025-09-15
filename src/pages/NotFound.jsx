@@ -4,7 +4,7 @@ import { Search, CircleAlert, House, ArrowLeft } from 'lucide-react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const NotFound = () => {
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.theme);
   const navigate = useNavigate();
 
   return (

@@ -1,56 +1,31 @@
-const initialState = {
-  isLoggedIn: false,
-  username: "",
-  isDemo: false,
-  justLoggedOut: false,
-};
+import { createSlice } from "@reduxjs/toolkit";
 
-export const authReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "auth/setAuth":
-      return {
-        ...state,
-        isLoggedIn: action.payload.isLoggedIn,
-        username: action.payload.username,
-        justLoggedOut: false,
-      };
-    case "auth/setDemo":
-      return {
-        ...state,
-        isDemo: true,
-        username: "Demo User",
-      };
-    case "auth/logout":
-      return {
-        ...state,
-        isDemo: false,
-        isLoggedIn: false,
-        username: "",
-        justLoggedOut: true,
-      };
-    default:
-      return state;
-  }
-};
-
-export function setAuth(isLoggedIn, username) {
-  return {
-    type: "auth/setAuth",
-    payload: {
-      isLoggedIn,
-      username,
+const authSlice = createSlice({
+  name: "auth",
+  initialState: {
+    isLoggedIn: false,
+    username: "",
+    isDemo: false,
+    justLoggedOut: false,
+  },
+  reducers: {
+    setAuth: (state, action) => {
+      state.isLoggedIn = action.payload.isLoggedIn;
+      state.username = action.payload.username;
+      state.justLoggedOut = false;
     },
-  };
-}
+    setDemo: (state) => {
+      state.isDemo = true;
+      state.username = "Demo User";
+    },
+    logout: (state) => {
+      state.isDemo = false;
+      state.isLoggedIn = false;
+      state.username = "";
+      state.justLoggedOut = true;
+    },
+  },
+});
 
-export function setDemo() {
-  return {
-    type: "auth/setDemo",
-  };
-}
-
-export function logout() {
-  return {
-    type: "auth/logout",
-  };
-}
+export const { setAuth, setDemo, logout } = authSlice.actions;
+export default authSlice.reducer;

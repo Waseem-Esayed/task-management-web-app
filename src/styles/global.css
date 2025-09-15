@@ -59,13 +59,13 @@
   box-sizing: border-box;
 }
 
-.dark body {
-  background-color: var(--sidebar-foreground);
-}
-
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+  transition: background-color 0.05s linear;
+}
+.dark body {
+  background-color: var(--sidebar-foreground);
 }
 
 section {

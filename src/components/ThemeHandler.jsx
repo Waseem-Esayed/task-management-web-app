@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
 function ThemeHandler() {
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.theme);
 
   useEffect(() => {
     if (theme === 'dark') {

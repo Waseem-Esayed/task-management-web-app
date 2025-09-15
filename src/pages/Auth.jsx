@@ -9,7 +9,7 @@ import { setAuth, setDemo } from '../features/auth/authSlice'
 
 const Auth = () => {
   const dispatch = useDispatch();
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.theme);
   const [currentValue, setCurrentValue] = useState('');
   const [redirect, setRedirect] = useState(false);
 

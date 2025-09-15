@@ -57,7 +57,7 @@ const TodoCard = ({ todo, openEditBox }) => {
 }
 
 const TodosWrapper = ({ title, openAddBox, openEditBox }) => {
-  const theme = useSelector((state) => state.theme.theme)
+  const theme = useSelector((state) => state.theme)
 
   const availableColors = {
     "To Do": {
@@ -135,9 +135,9 @@ const AddOrEditTaskBox = ({ visibleTaskBox, setVisibleTaskBox, defaultStatus, ed
     e.preventDefault()
     setVisibleTaskBox(false)
     if (editingTask) {
-      dispatch(updateTodo({ id: editingTask.id, title, description, status, priority }))
+      dispatch(updateTodo({ id: editingTask.id, title, description, status, priority }));
     } else {
-      dispatch(addTodo(title, description, status, priority))
+      dispatch(addTodo({ title, description, status, priority }));
     }
   }
 
@@ -207,7 +207,7 @@ const AddOrEditTaskBox = ({ visibleTaskBox, setVisibleTaskBox, defaultStatus, ed
 }
 
 const Dashboard = () => {
-  const theme = useSelector(state => state.theme.theme)
+  const theme = useSelector(state => state.theme)
   const username = useSelector(state => state.auth.username)
 
   const totalTasksAmount = useSelector(state => state.todo.total)

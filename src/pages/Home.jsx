@@ -19,7 +19,7 @@ const FeatureCard = ({ title, description, imgSrc, icon }) => {
 }
 
 const Home = () => {
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.theme);
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   const isDemo = useSelector((state) => state.auth.isDemo);
 

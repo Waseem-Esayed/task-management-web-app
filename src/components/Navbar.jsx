@@ -27,7 +27,7 @@ const NavBtn = ({ text, end, to }) => {
 const Navbar = () => {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   const isDemo = useSelector((state) => state.auth.isDemo);
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.theme);
   const username = useSelector((state) => state.auth.username)
 
   const dispatch = useDispatch();
