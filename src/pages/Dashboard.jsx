@@ -132,14 +132,37 @@ const AddOrEditTaskBox = ({ visibleTaskBox, setVisibleTaskBox, defaultStatus, ed
   const dispatch = useDispatch()
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setVisibleTaskBox(false)
-    if (editingTask) {
-      dispatch(updateTodo({ id: editingTask.id, title, description, status, priority }));
-    } else {
-      dispatch(addTodo({ title, description, status, priority }));
+    e.preventDefault();
+
+    const trimmedTitle = title.trim();
+    const trimmedDescription = description.trim();
+
+    if (!trimmedTitle || !trimmedDescription) {
+      return;
     }
-  }
+
+    setVisibleTaskBox(false);
+
+    if (editingTask) {
+      dispatch(updateTodo({
+        id: editingTask.id,
+        title: trimmedTitle,
+        description: trimmedDescription,
+        status,
+        priority
+      }));
+    } else {
+      dispatch(addTodo({
+        title: trimmedTitle,
+        description: trimmedDescription,
+        status,
+        priority
+      }));
+    }
+
+    setTitle("");
+    setDescription("");
+  };
 
   useEffect(() => {
     if (visibleTaskBox) {
