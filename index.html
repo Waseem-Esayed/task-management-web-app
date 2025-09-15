@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" >
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Task Management Web App</title>
   </head>
   <body>
@@ -14,5 +14,45 @@
       src="https://kit.fontawesome.com/668ebba5a9.js"
       crossorigin="anonymous"></script>
     <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      window.markerConfig = {
+        project: "68c877e8db90d06dbc6ddece",
+        source: "snippet",
+      };
+
+      !(function (e, r, a) {
+        if (!e.__Marker) {
+          e.__Marker = {};
+          var t = [],
+            n = { __cs: t };
+          ([
+            "show",
+            "hide",
+            "isVisible",
+            "capture",
+            "cancelCapture",
+            "unload",
+            "reload",
+            "isExtensionInstalled",
+            "setReporter",
+            "clearReporter",
+            "setCustomData",
+            "on",
+            "off",
+          ].forEach(function (e) {
+            n[e] = function () {
+              var r = Array.prototype.slice.call(arguments);
+              (r.unshift(e), t.push(r));
+            };
+          }),
+            (e.Marker = n));
+          var s = r.createElement("script");
+          ((s.async = 1), (s.src = "https://edge.marker.io/latest/shim.js"));
+          var i = r.getElementsByTagName("script")[0];
+          i.parentNode.insertBefore(s, i);
+        }
+      })(window, document);
+    </script>
   </body>
 </html>
