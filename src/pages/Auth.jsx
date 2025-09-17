@@ -28,7 +28,7 @@ const Auth = () => {
     const cleanValue = currentValue.trim();
     if (!cleanValue) return;
     setCurrentValue(cleanValue);
-    dispatch(setAuth(true, currentValue))
+    dispatch(setAuth({ isLoggedIn: true, username: currentValue }))
     setRedirect(true);
   }
 
