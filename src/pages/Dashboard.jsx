@@ -260,16 +260,14 @@ const Dashboard = () => {
           <h1 className={styles.pageTitle}>Welcome back, {username}!</h1>
           <p className={styles.subtitle}>Here's an overview of your tasks and projects.</p>
         </div>
-        <div>
-          <button
-            type="button"
-            className={styles.addTaskBtn}
-            onClick={() => openAddBox("To Do")}
-          >
-            <Plus size="1.05rem" />
-            Add Task
-          </button>
-        </div>
+        <button
+          type="button"
+          className={styles.addTaskBtn}
+          onClick={() => openAddBox("To Do")}
+        >
+          <Plus size="1.05rem" />
+          Add Task
+        </button>
       </header>
       <section className={styles.contentContainer}>
         <section className={styles.statsContainer}>

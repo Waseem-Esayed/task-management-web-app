@@ -48,7 +48,9 @@
   font-size: 0.875rem;
   font-weight: 600;
   border-radius: var(--radius);
-  transition: background-color 0.05s linear, color 0.05s linear;
+  transition:
+    background-color 0.05s linear,
+    color 0.05s linear;
   padding: 8px 12px 8px 10px;
   display: flex;
   justify-content: center;
@@ -108,7 +110,9 @@
   padding: 21px 24px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: color 0.05s linear, border-color 0.05s linear;
+  transition:
+    color 0.05s linear,
+    border-color 0.05s linear;
 }
 .darkPage .statCard {
   border-color: #262626;
@@ -159,7 +163,9 @@
   padding: 20.5px 24px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: background-color 0.05s 0.025s linear, border-color 0.05s linear;
+  transition:
+    background-color 0.05s 0.025s linear,
+    border-color 0.05s linear;
 }
 .darkPage .todosWrapper {
   border-color: #262626;
@@ -185,7 +191,9 @@
   background-color: white;
   padding: 3px 8px;
   border-radius: 5000px;
-  transition: background-color 0.05s linear, color 0.05s linear;
+  transition:
+    background-color 0.05s linear,
+    color 0.05s linear;
 }
 .darkPage .amount {
   color: white;
@@ -199,7 +207,9 @@
   justify-content: center;
   align-items: center;
   cursor: default;
-  transition: background-color 0.05s linear, color 0.05s linear;
+  transition:
+    background-color 0.05s linear,
+    color 0.05s linear;
 }
 .darkPage .plusBtn {
   color: var(--sidebar-primary-foreground);
@@ -268,7 +278,8 @@
   padding: 23px 24px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: background-color 0.05s 0.05s linear,
+  transition:
+    background-color 0.05s 0.05s linear,
     border-color 0.05s 0.05s linear;
 }
 .darkPage .todoContainer {
@@ -428,7 +439,9 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  transition: background-color 0.05s linear, border-color 0.05s linear;
+  transition:
+    background-color 0.05s linear,
+    border-color 0.05s linear;
 }
 .darkPage .boxContainer {
   background-color: #0a0a0a;
@@ -464,10 +477,14 @@
 
 .xBtn:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 1px rgb(158, 158, 158), 0 0 0 4px rgb(206, 206, 206);
+  box-shadow:
+    0 0 0 1px rgb(158, 158, 158),
+    0 0 0 4px rgb(206, 206, 206);
 }
 .darkPage .xBtn:focus-visible {
-  box-shadow: 0 0 0 3.5px #666666, 0 0 0 3px #4b4b4b;
+  box-shadow:
+    0 0 0 3.5px #666666,
+    0 0 0 3px #4b4b4b;
 }
 
 .xIcon {
@@ -545,8 +562,11 @@
   padding: 7px 12.5px 7px 13px;
   border: none;
   border-radius: 0.525rem;
-  transition: background-color 0.05s linear, -webkit-box-shadow 0.1s linear,
-    border 0.05s linear, color 0.05s linear,
+  transition:
+    background-color 0.05s linear,
+    -webkit-box-shadow 0.1s linear,
+    border 0.05s linear,
+    color 0.05s linear,
     -webkit-text-fill-color 0.05s linear;
 }
 .darkPage .boxTodoInput {
@@ -578,10 +598,14 @@
 
 .boxTodoInput:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 1px rgb(158, 158, 158), 0 0 0 4px rgb(206, 206, 206);
+  box-shadow:
+    0 0 0 1px rgb(158, 158, 158),
+    0 0 0 4px rgb(206, 206, 206);
 }
 .darkPage .boxTodoInput:focus-visible {
-  box-shadow: 0 0 0 3.5px #666666, 0 0 0 3px #4b4b4b;
+  box-shadow:
+    0 0 0 3.5px #666666,
+    0 0 0 3px #4b4b4b;
 }
 
 .boxTodoInput::selection {
@@ -600,21 +624,29 @@
   background-color: var(--input-background);
   padding: 7.75px 10px 7.75px 13px;
   border-radius: var(--radius);
-  transition: background-color 0.05s linear, -webkit-box-shadow 0.1s linear,
-    border-color 0.05s linear, color 0.05s linear,
+  transition:
+    background-color 0.05s linear,
+    -webkit-box-shadow 0.1s linear,
+    border-color 0.05s linear,
+    color 0.05s linear,
     -webkit-text-fill-color 0.05s linear;
 }
 .darkPage .dropMenuContainer select {
   background-color: #121212;
   color: white;
   border: 1px solid #262626;
+  cursor: default;
 }
 .dropMenuContainer select:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 1px rgb(158, 158, 158), 0 0 0 4px rgb(206, 206, 206);
+  box-shadow:
+    0 0 0 1px rgb(158, 158, 158),
+    0 0 0 4px rgb(206, 206, 206);
 }
 .darkPage .dropMenuContainer select:focus-visible {
-  box-shadow: 0 0 0 3.5px #666666, 0 0 0 3px #4b4b4b;
+  box-shadow:
+    0 0 0 3.5px #666666,
+    0 0 0 3px #4b4b4b;
 }
 
 .btnsContainer {
@@ -633,10 +665,14 @@
 
 .btnsContainer > button:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 1px rgb(158, 158, 158), 0 0 0 4px rgb(206, 206, 206);
+  box-shadow:
+    0 0 0 1px rgb(158, 158, 158),
+    0 0 0 4px rgb(206, 206, 206);
 }
 .darkPage .btnsContainer > button:focus-visible {
-  box-shadow: 0 0 0 3.5px #666666, 0 0 0 3px #4b4b4b;
+  box-shadow:
+    0 0 0 3.5px #666666,
+    0 0 0 3px #4b4b4b;
 }
 
 .btnsContainer .cancelBtn {
@@ -644,8 +680,11 @@
   color: var(--primary);
   padding: 5px 15.5px;
   border: 1px solid var(--border);
-  transition: background-color 0.05s linear, color 0.05s linear,
-    border-color 0.05s linear, -webkit-box-shadow 0.1s linear;
+  transition:
+    background-color 0.05s linear,
+    color 0.05s linear,
+    border-color 0.05s linear,
+    -webkit-box-shadow 0.1s linear;
 }
 .darkPage .cancelBtn {
   background-color: #121212;
@@ -664,7 +703,9 @@
   background-color: var(--primary);
   color: oklch(0.985 0 0);
   padding: 6px 15.5px;
-  transition: background-color 0.05s linear, color 0.05s linear;
+  transition:
+    background-color 0.05s linear,
+    color 0.05s linear;
 }
 .darkPage .createBtn {
   background-color: white;
